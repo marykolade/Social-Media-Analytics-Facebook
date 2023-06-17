@@ -7,7 +7,7 @@ This solution accelerator helps developers with all the resources needed to buil
 ![Social Media Analytics Visual](./Deployment/img/SAOverview.png) 
 
 ## Prerequisites
-To use this solution accelerator, you will need access to an [Azure subscription](https://azure.microsoft.com/en-us/free/). While not required, a prior understanding of Azure Synapse Analytics, Azure Cognitive Services, Azure Maps and Power BI  will be helpful.
+To use this solution accelerator, you will need access to an [Azure subscription](https://azure.microsoft.com/en-us/free/). While not required, a prior understanding of Azure Synapse Analytics, Azure Cognitive Services, and Power BI  will be helpful.
 
 For additional training and support, please see:
 
@@ -22,7 +22,7 @@ Azure Cogntive Services require to accept the terms and conditions of Responsibl
 
 The button below will deploy Azure Synapse Analytics, Azure Language Service, Azure Translator, Azure Maps and its related resources:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmicrosoft%2FAzure-Social-Media-Analytics-Solution-Accelerator%2Fmain%2FDeployment%2Fdeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmarykolade%2FSocial-Media-Analytics-Facebook%2Fmain%2FDeployment%2Fdeploy.json)
 
 * Go to the [Deployment guide](./Deployment/Deployment.md) to set up your Azure resources for this solution.  
 

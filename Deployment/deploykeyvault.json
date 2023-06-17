@@ -1,0 +1,163 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    
+    "parameters": {
+        "KeyVaultName":{
+            "type":"string",
+            "defaultValue": "xxx", 
+            "metadata": {
+                "description":"The name of your Key Vault that you are using for this solution"
+            }
+        },
+        "StorageAccount": {
+            "type":"string",
+            "defaultValue": "xxx",
+            "metadata": {
+                "description": "The Translator key you are using for this solution"
+            }
+        },
+        "StorageAccountKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Translator endpoint you are using for this solution"
+            }
+        }, 
+        "SentimentKey": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Text Analytics key you are using for this solution"
+            }
+        }, 
+        "SentimentURL": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Text Analytics endpoint you are using for this solution"
+            }
+        }, 
+        "FacebookAppID": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter API key you are using for this solution"
+            }
+        }, 
+        "FacebookAppSecret": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter API secret key you are using for this solution"
+            }
+        }, 
+        "FacebookPageToken": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter access token you are using for this solution"
+            }
+        },
+        "FacebookPageID": {
+            "type": "securestring", 
+            "metadata": {
+                "description": "The Twitter access token secret you are using for this solution"
+            }
+        }
+
+    },
+
+    "variables": {
+        "STORAGE_ACCOUNT":"STORAGEACCOUNT",
+		"STORAGE_ACCOUNT_KEY":"STORAGEACCOUNTKEY",
+		"SENTIMENT_KEY":"TEXTANALYTICSKEY",
+		"SENTIMENT_URL":"TEXTANALYTICSENDPOINT",
+		"APP_ID":"FBAPPID",
+		"APP_SECRET":"FBAPPSECRET",
+		"PAGE_TOKEN":"FBPAGETOKEN",
+		"PAGE_ID":"FBPAGEID"
+    },
+
+    "resources": [
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('STORAGE_ACCOUNT'))]",
+            "properties": {
+                "value": "[parameters('StorageAccount')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('STORAGE_ACCOUNT_KEY'))]",
+            "properties": {
+                "value": "[parameters('StorageAccountKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('SENTIMENT_KEY'))]",
+            "properties": {
+                "value": "[parameters('SentimentKey')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('SENTIMENT_URL'))]",
+            "properties": {
+                "value": "[parameters('SentimentURL')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('APP_ID'))]",
+            "properties": {
+                "value": "[parameters('FacebookAppID')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('APP_SECRET'))]",
+            "properties": {
+                "value": "[parameters('FacebookAppSecret')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('PAGE_TOKEN'))]",
+            "properties": {
+                "value": "[parameters('FacebookPageToken')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "apiVersion": "2019-09-01",
+            "name": "[concat(parameters('KeyVaultName'), '/', variables('PAGE_ID'))]",
+            "properties": {
+                "value": "[parameters('FacebookPageID')]"
+            },
+            "dependsOn": []
+        },
+        { 
+            "apiVersion": "2020-10-01",
+            "name": "pid-4ac74494-c37b-5d09-a811-cc253a1b88b7",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "Incremental",
+                "template": {
+                    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+                    "contentVersion": "1.0.0.0",
+                    "resources": []
+                }
+            }
+        }
+    ]
+}
