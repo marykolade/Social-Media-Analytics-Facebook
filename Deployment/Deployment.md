@@ -31,7 +31,22 @@ Populate the variables accordingly:
 8. **Facebook App ID**
 9. **Facebook App Secret**
 ![FacebookKeyVaultDeployment1](./img/FacebookKeyVaultDeploy1.png "FacebookKeyVaultDeployment1")
-10. **Facebook Page Token**
+10. **Facebook Page Token**: Under Tools > Graph API Explorer, select the Facebook page and add the required permissions (outlined below). Then generate an access token. This is a temporary token which you will exchange for a permanent token within Azure synapse notebook.
+a.	read_insights
+b.	pages_show_list
+c.	read_page_mailboxes
+d.	ads_management
+e.	ads_read
+f.	pages_messaging
+g.	instagram_basic
+h.	instagram_manage_comments
+i.	instagram_manage_insights
+j.	groups_access_member_info
+k.	attribution_read
+l.	pages_read_engagement
+m.	pages_read_user_content
+n.	public_profile
+o.	email
 ![FacebookKeyVaultDeployment2](./img/FacebookKeyVaultDeploy2.png "FacebookKeyVaultDeployment2")
 11. **Facebook Page ID**
 ![FacebookKeyVaultDeployment3](./img/FacebookKeyVaultDeploy3.png "FacebookKeyVaultDeployment3")
