@@ -48,6 +48,7 @@ xii.	pages_read_engagement
 xiii.	pages_read_user_content
 xiv.	public_profile
 xv.	email
+> 
 ![FacebookKeyVaultDeployment2](./img/FacebookKeyVaultDeploy2.png "FacebookKeyVaultDeployment2")
 11. **Facebook Page ID**
 ![FacebookKeyVaultDeployment3](./img/FacebookKeyVaultDeploy3.png "FacebookKeyVaultDeployment3")
