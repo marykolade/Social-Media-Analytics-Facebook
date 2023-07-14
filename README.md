@@ -36,6 +36,7 @@ The architecture diagram below details what you will be building for this Soluti
 ## Power BI Dashboards
 
 **Summary Dashboard** - View notable topics, hashtags, influencers, accounts, and locations where there's heightened interest
+>Note: Due to Facebook and Instagram limitations, business and creator profiles with fewer than 100 followers won’t see audience demographics, including age, gender, location, and language.
 
 ![Summary Dashboard](./Deployment/img/SummaryDashboard.png "Summary Dashboard")
 
